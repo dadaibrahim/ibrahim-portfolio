@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: `${site.name} — Portfolio`,
     description: site.summary
   },
-  metadataBase: new URL("https://example.com") // replace after deploying (Vercel URL or custom domain)
+  metadataBase: new URL("https://dadaibrahim.vercel.app")
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

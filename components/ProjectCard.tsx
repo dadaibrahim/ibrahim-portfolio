@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Badge from "./Badge";
 import type { Project } from "@/lib/data";
 import { ExternalLink } from "lucide-react";
@@ -11,14 +11,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.repo || project.link ? (
           <div className="flex gap-2">
             {project.repo && (
-              <Link href={project.repo} className="text-sm inline-flex items-center gap-1 hover:underline">
+              <a href={project.repo} className="text-sm inline-flex items-center gap-1 hover:underline">
                 Repo <ExternalLink size={14} />
-              </Link>
+              </a>
             )}
             {project.link && (
-              <Link href={project.link} className="text-sm inline-flex items-center gap-1 hover:underline">
+              <a href={project.link} className="text-sm inline-flex items-center gap-1 hover:underline">
                 Live <ExternalLink size={14} />
-              </Link>
+              </a>
             )}
           </div>
         ) : null}
